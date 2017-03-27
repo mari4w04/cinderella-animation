@@ -6,3 +6,9 @@
     background-repeat: no-repeat;
 
 }
+.hide{
+    display: none;
+}
+.show{
+    display: block !important;
+}
