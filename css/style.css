@@ -1,0 +1,8 @@
+#cont{
+    background-image: url('../img/bg.png');
+    height: 95vh;
+    width: 95vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
