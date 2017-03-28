@@ -16,19 +16,183 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 60px;
-
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+}
+#end{
+    height: 100vh;
+    width: 98vw;
+    background-color: black;
+    position: absolute;
+    z-index: 10;
+    top: -100vh;
+    color: white;
+    font-family: 'akrobatregular';
+    font-size: 45px;
+}
+#end p{
+    margin: 45vh;
+    text-align: center;
+}
+.credits{
+    animation: movecredits 1s forwards;
+}
+@keyframes movecredits{
+    to{
+        top: 0;
+    }
 }
 #clock{
     height: 500px;
     width: 500px;
     background-image: url("../img/clock-sprite.png");
-    animation: change 6s steps(4) 1;
+    animation: change 4s steps(2) 1;
     margin: auto;
 }
 @keyframes change{
     to{
-        background-position: 2000px;
+        background-position: -1000px;
     }
+}
+#cinderella{
+    height: 25%;
+    width: auto;
+    position: absolute;
+    left: 18vw;
+    top: 30vh;
+}
+.removecinderella{
+    display: none;
+}
+#shoe1{
+    height: 4%;
+    width: auto;
+    position: absolute;
+    left: 18vw;
+    top: 60vh;
+    cursor: pointer;
+}
+#shoe2{
+    height: 7%;
+    width: auto;
+    position: absolute;
+    left: 10vw;
+    top: 65vh;
+    cursor: pointer;
+}
+#theshoe{
+    height: 6%;
+    width: auto;
+    position: absolute;
+    left: 16vw;
+    top: 70vh;
+    transform: rotate(25deg);
+    cursor: pointer;
+}
+#shoe3{
+    height: 7%;
+    width: auto;
+    position: absolute;
+    left: 21vw;
+    top: 75vh;
+    transform: rotate(-15deg);
+    cursor: pointer;
+}
+#prince{
+
+    position: absolute;
+    left: 14vw;
+    top: 14vw;
+
+}
+.prince-bg{
+    background-image: url("../img/prince.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 27%;
+    width: 24%;
+}
+#prince.prince2ndbg{
+    background-image: url("../img/princeshoe.png");
+}
+#prince.prince3ndbg{
+    background-image: url("../img/princeshoe-reflected.png");
+}
+#prince.prince4thbg{
+    background-image: url("../img/prince-reflected.png");
+}
+.princegodown{
+    animation: princedown 1s forwards;
+}
+@keyframes princedown{
+    100%{
+        transform: translate3d(-5vw, 10vw, 0)
+    }
+}
+.princemove{
+    animation: princemove 2s forwards;
+}
+@keyframes princemove{
+    0%{
+        transform: translate3d(-5vw, 10vw, 0);
+    }
+    50%{
+        transform: translate3d(-2vw, 20vw, 0);
+    }
+    100%{
+        transform: translate3d(15vw, 20vw, 0);
+    }
+}
+.movedown{
+    animation: movedown 2s forwards;
+}
+@keyframes movedown{
+    50%{
+        transform: translate3d(-10vw,10vw,0)
+    }
+    100%{
+        transform: translate3d(10vw,20vw,0)
+    }
+}
+.fade{
+    animation: fadein 1s forwards;
+}
+@keyframes fadein{
+    0%{
+        opacity: 0 !important;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.wiggle{
+    animation: wiggle 1s infinite;
+}
+@keyframes wiggle{
+    0%{
+        transform: rotate(-15deg);
+    }
+    50%{
+        transform: rotate(15deg);
+    }
+    100%{
+        transform: rotate(-15deg);
+    }
+}
+.goaway{
+    animation: goaway 2s forwards;
+}
+@keyframes goaway {
+    0%{
+        transform: translate3d(10vw,20vw,0);
+    }
+    100%{
+        transform: translate3d(100vw,20vw,0);
+    }
+}
+.disappear{
+    display: none;
 }
 .hide{
     display: none;
