@@ -1,14 +1,50 @@
+@font-face {
+    font-family: 'akrobatregular';
+    src: url('../fonts/akrobat-regular-webfont.woff2') format('woff2'),
+         url('../fonts/akrobat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
 #cont{
-    background-image: url('../img/bg.png');
-    height: 95vh;
-    width: 95vw;
-    background-size: contain;
+    background-image: url('../img/bg.jpg');
+    height: 92vh;
+    width: 98vw;
+    background-size: cover;
     background-repeat: no-repeat;
+    padding-top: 60px;
 
+}
+#clock{
+    height: 500px;
+    width: 500px;
+    background-image: url("../img/clock-sprite.png");
+    animation: change 6s steps(4) 1;
+    margin: auto;
+}
+@keyframes change{
+    to{
+        background-position: 2000px;
+    }
 }
 .hide{
     display: none;
 }
 .show{
     display: block !important;
+}
+button{
+    background-color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    font-family: 'akrobatregular';
+    font-size: 25px;
+    margin: auto;
+    border-width: 0;
+    border-style: none;
+    border-image: none;
+    cursor: pointer;
 }
