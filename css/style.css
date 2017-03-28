@@ -89,6 +89,24 @@ body{
     top: 70vh;
     transform: rotate(25deg);
     cursor: pointer;
+    z-index: 1;
+}
+#glow{
+    height: 10%;
+    width: auto;
+    position: absolute;
+    left: 14.5vw;
+    top: 69vh;
+    z-index: 0;
+    opacity: .5;
+}
+.scale{
+    animation: scale 2s ease-in-out infinite;
+}
+@keyframes scale{
+    to{
+        transform: rotate(360deg);
+    }
 }
 #shoe3{
     height: 7%;

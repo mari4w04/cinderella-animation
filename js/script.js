@@ -13,6 +13,7 @@ let prince = document.querySelector('#prince');
 let princeLine = document.querySelector('#princetalking');
 let cinderellaLine = document.querySelector('#cinderellaspeaking');
 let end = document.querySelector('#end');
+let glow = document.querySelector("#glow");
 
 narrationSound1.play();
 clockDiv.classList.add("hide");
@@ -22,6 +23,7 @@ shoe2.classList.add("hide");
 shoe3.classList.add("hide");
 prince.classList.add("hide");
 cinderellaShoe.classList.add("hide");
+glow.classList.add("hide");
 
 
 narrationSound1.addEventListener('ended', show1stButton);
@@ -74,8 +76,17 @@ function shoeEListener(item){
     item.addEventListener("click", shoeClicked);
 };
 
+let clickNumber = 0;
+
 function shoeClicked(){
-  this.classList.add("disappear");
+    this.classList.add("disappear");
+    clickNumber++;
+    if (clickNumber==3){
+        glow.classList.remove("hide");
+        glow.classList.add("scale");
+    } else if (clickNumber>3){
+        clickNumber=0;
+    }
 };
 
 cinderellaShoe.addEventListener('click', princeAppears);
@@ -85,21 +96,31 @@ function princeAppears(){
     prince.addEventListener('animationend', princeBgChange);
     function princeBgChange(){
         cinderellaShoe.classList.add("hide");
+        glow.classList.add("hide");
+        glow.classList.remove("scale");
         prince.classList.add("prince2ndbg");
         prince.classList.add("princemove");
         prince.addEventListener('animationend', princeBgReflect);
         function princeBgReflect(){
+
+
             prince.classList.add("prince3ndbg");
             princeLine.play();
             princeLine.addEventListener('ended', cinderellaSpeak);
             function cinderellaSpeak(){
+
+
                 prince.classList.add("prince4thbg");
                 cinderellaLine.play();
                 cinderellaLine.addEventListener('ended', cinderellaGoAway);
                 function cinderellaGoAway(){
+
+
                     cinderella.classList.add("goaway");
                     cinderella.addEventListener('animationend', removeCinderella);
                         function removeCinderella(){
+                          cinderellaShoe.classList.add("hide");
+
                           cinderella.classList.add("removecinderella");
                           end.classList.add("credits");
                         };
@@ -108,7 +129,4 @@ function princeAppears(){
         }
 
     };
-
-
-
 };
