@@ -66,7 +66,7 @@ function showMainContainer(){
         shoe1.classList.add("wiggle");
         shoe2.classList.add("wiggle");
         shoe3.classList.add("wiggle");
-        cinderellaShoe.classList.add("wiggle");
+
     }
 
 };
@@ -84,6 +84,7 @@ function shoeClicked(){
     if (clickNumber==3){
         glow.classList.remove("hide");
         glow.classList.add("scale");
+        cinderellaShoe.classList.add("wiggle");
     } else if (clickNumber>3){
         clickNumber=0;
     }

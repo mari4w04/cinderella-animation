@@ -35,6 +35,19 @@ body{
     margin: 45vh;
     text-align: center;
 }
+#end a{
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    font-size: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#end a img{
+    height: 26px;
+    width: 30px;
+    margin-right: 10px;
+}
 .credits{
     animation: movecredits 1s forwards;
 }
@@ -196,6 +209,20 @@ body{
     }
     100%{
         transform: rotate(-15deg);
+    }
+}
+.small-wiggle{
+    animation: smallwiggle 1s infinite;
+}
+@keyframes smallwiggle{
+    0%{
+        transform: rotate(-5deg);
+    }
+    50%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(-5deg);
     }
 }
 .goaway{
