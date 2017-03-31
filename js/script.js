@@ -88,6 +88,7 @@ function shoeClicked(){
     } else if (clickNumber>3){
         clickNumber=0;
     }
+    //cdfdff
 };
 
 cinderellaShoe.addEventListener('click', princeAppears);
